@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/script.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+<body>
+
+<div class="chat_window">
+    <div class="top_menu">
+        <div class="title"><img src="logo.png" ></div>
+    </div>
+    <ul class="messages"></ul>
+    <div class="bottom_wrapper clearfix">
+        <div class="message_input_wrapper">
+            <input id="message_input_value" class="message_input" placeholder="Введите своё сообщение..." />
+        </div>
+        <div>
+        <button onclick="connect()" class = "buttons2">Подключиться к чату</button>
+        <button onclick="sendMessage()" class="text buttons2">Отправить</button>
+        <button onclick="disconnect()" class = "buttons2">Отключиться от чата</button>
+        </div>
+    </div>
+</div>
+<div id = "message_template" class="message_template"><li class="message">
+    <div class="avatar"></div>
+    <div class="text_wrapper"><div class="text"></div></div>
+</li></div>
+</body>
+</html>
